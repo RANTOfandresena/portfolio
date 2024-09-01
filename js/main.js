@@ -147,7 +147,7 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon())
 })
 
-/* Mail integration */
+/* Mail integration 
 document.addEventListener("DOMContentLoaded", function() {
   emailjs.init("A9PZASRNY-NxAYHQX")
 })
@@ -164,4 +164,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       console.log('Failed...', error)
       alert('Email sending failed.')
     })
-})
+})*/

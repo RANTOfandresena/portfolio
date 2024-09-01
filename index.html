@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Herimandranto Fandresena">
+    <meta name="description" content="Herimandranto Fandresena | Portfolio">
     <meta name="keywords" content="Herimandranto Fandresena Portfolio">
     <meta name="copyright" content="Herimandranto Fandresena">
     <meta name="author" content="Herimandranto Fandresena">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/afficherProjet.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/r.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//r.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//r.png">
@@ -474,40 +475,43 @@
                         <div class="articles-data">
                             <h3 class="articles-title">Application mobile de reservation de transport public "Handeha"</h3>
                             <p class="articles-description">Java,Django,Postgres et SQLite</p>
-                            <a href="#" class="button button-flex button-small articles-button">
+                            <a onclick="openModal();afficher(1,13);currentSlide(1)" class="button button-flex button-small articles-button">
                                 Voir plus <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
                     <!-- Articles section: second element -->
                     <div class="articles-content grid swiper-slide">
-                        <img src="img/article-2.png" alt="Articles" class="article-img">
+                        <img src="img/article-1.png" alt="Articles" class="article-img">
                         <div class="articles-data">
                             <h3 class="articles-title">Apprentissage en ligne</h3>
                             <p class="articles-description">Laravel,VueJs,MySQL</p>
-                            <a href="https://github.com/RANTOfandresena/apprentissage_en_ligne" class="button button-flex button-small articles-button">
+                            <!-- href="https://github.com/RANTOfandresena/apprentissage_en_ligne" -->
+                            <a class="button button-flex button-small articles-button">
                                 Voir plus <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
                     <!-- Articles section: third element -->
                     <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
+                        <img src="img/article-2.png" alt="Articles" class="article-img">
                         <div class="articles-data">
                             <h3 class="articles-title">Application web:Ludo multiJoueur en ligne</h3>
                             <p class="articles-description">Java,Javascript,MySQL</p>
-                            <a href="https://github.com/RANTOfandresena/LudoJava" class="button button-flex button-small articles-button">
+                            <!-- href="https://github.com/RANTOfandresena/LudoJava"   -->
+                            <a onclick="openModal();afficher(3,8);currentSlide(1)" class="button button-flex button-small articles-button">
                                 Voir plus <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
 
                     <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
+                        <img src="img/note.png" alt="Articles" class="article-img" style="width: 100%;">
                         <div class="articles-data">
                             <h3 class="articles-title">Application mobile:Bloc note</h3>
                             <p class="articles-description">Java,SQLite</p>
-                            <a href="https://github.com/RANTOfandresena/Block-Note" class="button button-flex button-small articles-button">
+                            <!-- href="https://github.com/RANTOfandresena/Block-Note"-->
+                            <a onclick="openModal();afficher(4,5);currentSlide(1)" class="button button-flex button-small articles-button">
                                 Voir plus <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
@@ -680,10 +684,22 @@
         <i class="fas fa-arrow-up scrollup-icon"></i>
     </a>
 
-    <script src="https://kit.fontawesome.com/027d3564f6.js" crossorigin="anonymous"></script>
+    <div id="myModal" class="modal">
+        <span class="close cursor" style="z-index: 1;" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="list">
+          <!-- insertion js-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div id="apres" class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+    <!-- <script src="js/027d3564f6.js" crossorigin="anonymous"></script> -->
+    <script src="js/027d3564f6.js"></script>
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script src="js/swiper-bundle.js"></script>
+    <script src="js/afficherProjet.js"></script>
     <script src="js/main.js"></script>
-
     </body>
 </html>
