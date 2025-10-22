@@ -1,0 +1,72 @@
+voici une liste des assets que je veux ajouter dans le slide (alarme,camshield,hearme,faritany,hui):
+ranto@ranto-K84LY:/mnt/44A683F0A683E132/projet/portfolio$ ls assets/
+ alarme.mp4                                      faritany1.mp4   hui.mp4              logo_hearme.jpg
+ camshield.mp4                                   faritany.mp4    logo_alarme.png      logo_hui.png
+ favicon                                         logo_camshield.png                   mon_profile.png
+ hearme.mp4                                      logo_faritany.png
+ranto@ranto-K84LY:/mnt/44A683F0A683E132/projet/portfolio$ 
+
+
+
+
+voici le slide existant que tu doit ajouter le alarme,camshield,hearme,faritany,hui (sans modifier les 3 existants) :
+<div class="articles-container container swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Articles section: first element -->
+        <div class="articles-content grid swiper-slide">
+            <img src="img/article-1.png" alt="Articles" class="article-img">
+            <div class="articles-data">
+                <h3 class="articles-title">Application mobile de reservation de transport public "Handeha"</h3>
+                <p class="articles-description">Java,Django,Postgres et SQLite</p>
+                <a onclick="openModal();afficher(1,13);currentSlide(1)" class="button button-flex button-small articles-button">
+                    Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Articles section: third element -->
+        <div class="articles-content grid swiper-slide">
+            <img src="img/article-2.png" alt="Articles" class="article-img">
+            <div class="articles-data">
+                <h3 class="articles-title">Application web:Ludo multiJoueur en ligne</h3>
+                <p class="articles-description">Java,Javascript,MySQL</p>
+                <!-- href="https://github.com/RANTOfandresena/LudoJava"   -->
+                <a onclick="openModal();afficher(3,8);currentSlide(1)" class="button button-flex button-small articles-button">
+                    Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="articles-content grid swiper-slide">
+            <img src="img/note.png" alt="Articles" class="article-img" style="width: 100%;">
+            <div class="articles-data">
+                <h3 class="articles-title">Application mobile:Bloc note</h3>
+                <p class="articles-description">Java,SQLite</p>
+                <!-- href="https://github.com/RANTOfandresena/Block-Note"-->
+                <a onclick="openModal();afficher(4,5);currentSlide(1)" class="button button-flex button-small articles-button">
+                    Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-button-next">
+        <i class="fas fa-angle-right swiper-articles-icon"></i>
+    </div>
+    <div class="swiper-button-prev">
+        <i class="fas fa-angle-left swiper-articles-icon"></i>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+voici le model qui afficher les videos:
+<div id="myModal" class="modal">
+    <span class="close cursor" style="z-index: 1;" onclick="closeModal()">&times;</span>
+    <div class="modal-content" id="list">
+        <!-- insertion js-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div id="apres" class="caption-container">
+        <p id="caption"></p>
+    </div>
+</div>

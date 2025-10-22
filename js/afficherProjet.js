@@ -43,6 +43,22 @@ function afficher(dossier,nbImage){
     }
 }
 
+function afficherVideo(chemin){
+    var suppres = document.querySelectorAll(".mySlides")
+    var columns = document.querySelectorAll(".column")
+    suppres.forEach(balise => { balise.remove() })
+    columns.forEach(balise => { balise.remove() })
+    var div=document.createElement("div")
+    div.innerHTML=
+    `
+    <div class="mySlides" style="display: flex;">
+        <video src="assets/${chemin}" style="height: 70vh;" autoplay muted controls>
+    </div>
+    `
+    baliseModel.innerHTML=''
+    baliseModel.prepend(div)
+}
+
 
 function openModal() {
     document.getElementById("myModal").style.display = "block";
@@ -53,7 +69,7 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-    showSlides(slideIndex);
+showSlides(slideIndex);
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -76,6 +92,7 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+    console.log(slides)
     if(slides.length!=0){
         slides[slideIndex-1].style.display = "flex";
         // dots[slideIndex-1].className += " active";

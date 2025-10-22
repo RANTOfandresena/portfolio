@@ -167,11 +167,16 @@
         <!-- Skills section -->
         <section class="skills section" id="skills">
             <h2 class="section-title">compétences</h2>
-            <span class="section-subtitle"></span>
+            <!-- <span class="section-subtitle"></span> -->
 
-            <div class="skills-container container grid">
+            <div class="skills-container container grid" style="max-width: max-content;">
+                <div class="tech-section">
+                    <h3 class="tech-item react">Frontend : React</h3>
+                    <h3 class="tech-item django">Backend : Django</h3>
+                    <h3 class="tech-item mobile">Application Mobile : Java / Kotlin, Jetpack Compose</h3>
+                </div>
                 <!--Languages de programmation -->
-                <div class="skills-container-content skills-open">
+                <!-- <div class="skills-container-content skills-open">
                     <div class="skills-container-header">
                         <i class="fas fa-microscope skills-icon"></i>
                         <div>
@@ -249,10 +254,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- frameworks -->
-                <div class="skills-container-content skills-close">
+                <!-- <div class="skills-container-content skills-close">
                     <div class="skills-container-header">
                         <i class="fas fa-server skills-icon"></i>
                         <div>
@@ -289,7 +294,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Skills 3: Software -->
                 <!-- <div class="skills-container-content skills-close">
@@ -350,7 +355,7 @@
                 </div> -->
 
                 <!-- Skills 4: Languages -->
-                <div class="skills-container-content skills-close">
+                <!-- <div class="skills-container-content skills-close">
                     <div class="skills-container-header">
                         <i class="fas fa-language skills-icon"></i>
                         <div>
@@ -387,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -398,18 +403,18 @@
 
             <div class="experience-container container">
                 <div class="experience-tabs">
-                    <div class="experience-tabs-button button-flex experience-active" data-target="#education">
+                    <div class="experience-tabs-button button-flex" data-target="#education">
                         <i class="fas fa-graduation-cap experience-icon"></i>
-                        Education
+                        Formation
                     </div>
-                    <div class="experience-tabs-button button-flex" data-target="#work">
+                    <div class="experience-tabs-button button-flex  experience-active" data-target="#work">
                         <i class="fas fa-briefcase experience-icon"></i>
-                        Stage
+                        Experience
                     </div>
                 </div>
                 <div class="experience-sections">
                     <!-- Experience section 1: Education -->
-                    <div class="experience-content experience-active" data-content id="education">
+                    <div class="experience-content" data-content id="education">
                         <div class="experience-data">
                             <div class="experience-data-alt">
                                 <h3 class="experience-title">Licence en Genie Logiciel</h3>
@@ -443,8 +448,22 @@
                     </div>
 
                     <!-- Experience content 2: Work -->
-                    <div class="experience-content" data-content id="work">
+                    <div class="experience-content experience-active" data-content id="work">
                         <!-- Experience section 1: second element -->
+                         <div class="experience-data">
+                            <div class="experience-data-alt">
+                                <h3 class="experience-title">Développeur Fullstack Freelance (React et Django)</h3>
+                                <span class="experience-subtitle">Conception, développement et déploiement d'une application web</span>
+                                <div class="experience-calendar">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Janvier 2025 - Juin 2025
+                                </div>
+                            </div>
+                            <div>
+                                <span class="experience-rounder"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                        </div>
                         <div class="experience-data">
                             <div></div>
                             <div>
@@ -453,7 +472,7 @@
                             </div>
                             <div class="experience-data-alt">
                                 <h3 class="experience-title">SmartOne.ai</h3>
-                                <span class="experience-subtitle">Amélioration des applicarion web utiliés par l'entreprise <br> codeIgniter, Symfony et React</span>
+                                <span class="experience-subtitle">Amélioration des applicarion web utiliés par l'entreprise <br> codeIgniter, Symfony, Django et React</span>
                                 <div class="experience-calendar">
                                     <i class="fas fa-calendar-alt"></i>
                                     2024
@@ -488,25 +507,69 @@
             <div class="articles-container container swiper-container">
                 <div class="swiper-wrapper">
                     <!-- Articles section: first element -->
+                     <div class="articles-content grid swiper-slide">
+                        <img src="assets/logo_alarme.png" alt="Alarme" class="article-img">
+                        <div class="articles-data">
+                            <h3 class="articles-title">Application mobile: Alarme</h3>
+                            <p class="articles-description">Kotlin :Jetpack Compose</p>
+                            <a href="https://github.com/RANTOfandresena/Alarme" class="button button-flex button-small articles-button">code source</a>
+                            <a onclick="openModal();afficherVideo('alarme.mp4');" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="articles-content grid swiper-slide">
+                        <img src="assets/logo_camshield.png" alt="Camshield" class="article-img">
+                        <div class="articles-data">
+                            <h3 class="articles-title">Application mobile: Camshield</h3>
+                            <p class="articles-description">Java, Django, IOT</p>
+                            <a href="https://github.com/RANTOfandresena/Alarme" class="button button-flex button-small articles-button">code source</a>
+                            <a onclick="openModal();afficherVideo('camshield.mp4');" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="articles-content grid swiper-slide">
                         <img src="img/article-1.png" alt="Articles" class="article-img">
                         <div class="articles-data">
                             <h3 class="articles-title">Application mobile de reservation de transport public "Handeha"</h3>
                             <p class="articles-description">Java,Django,Postgres et SQLite</p>
+                            <a href="https://github.com/RANTOfandresena/app_android_handeha" class="button button-flex button-small articles-button">code source</a>
                             <a onclick="openModal();afficher(1,13);currentSlide(1)" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
-                    <!-- Articles section: second element -->
                     <div class="articles-content grid swiper-slide">
-                        <img src="img/article-1.png" alt="Articles" class="article-img">
+                        <img src="img/note.png" alt="Articles" class="article-img" style="width: 100%;">
                         <div class="articles-data">
-                            <h3 class="articles-title">Apprentissage en ligne</h3>
-                            <p class="articles-description">Laravel,VueJs,MySQL</p>
-                            <!-- href="https://github.com/RANTOfandresena/apprentissage_en_ligne" -->
-                            <a class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                            <h3 class="articles-title">Application mobile:Bloc note</h3>
+                            <p class="articles-description">Java,SQLite</p>
+                            <a href="https://github.com/RANTOfandresena/Block-Note" class="button button-flex button-small articles-button">code source</a>
+                            <a onclick="openModal();afficher(4,5);currentSlide(1)" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="articles-content grid swiper-slide">
+                        <img src="assets/logo_hearme.jpg" alt="Hearme" class="article-img" style="height: 150px;">
+                        <div class="articles-data">
+                            <h3 class="articles-title">Application Web: Hearme</h3>
+                            <p class="articles-description">Django, React, Postgres</p>
+                            <a href="https://hearme.digital" class="button button-flex button-small articles-button">hearme.digital</a>
+                            <a onclick="openModal();afficherVideo('hearme.mp4');" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="articles-content grid swiper-slide">
+                        <img src="assets/logo_hui.png" alt="Hui" class="article-img">
+                        <div class="articles-data">
+                            <h3 class="articles-title">Hackathon 2025 (Projet fait en 20 heurs)</h3>
+                            <p class="articles-description">Django, React</p>
+                            <a href="https://github.com/RANTOfandresena/hackathon" class="button button-flex button-small articles-button">code source</a>
+                            <a onclick="openModal();afficherVideo('hui.mp4');" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
@@ -516,80 +579,24 @@
                         <div class="articles-data">
                             <h3 class="articles-title">Application web:Ludo multiJoueur en ligne</h3>
                             <p class="articles-description">Java,Javascript,MySQL</p>
+                            <a href="https://github.com/RANTOfandresena/LudoJava" class="button button-flex button-small articles-button">code source</a>
                             <!-- href="https://github.com/RANTOfandresena/LudoJava"   -->
                             <a onclick="openModal();afficher(3,8);currentSlide(1)" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
-
                     <div class="articles-content grid swiper-slide">
-                        <img src="img/note.png" alt="Articles" class="article-img" style="width: 100%;">
+                        <img src="assets/logo_faritany.png" alt="Faritany" class="article-img">
                         <div class="articles-data">
-                            <h3 class="articles-title">Application mobile:Bloc note</h3>
-                            <p class="articles-description">Java,SQLite</p>
-                            <!-- href="https://github.com/RANTOfandresena/Block-Note"-->
-                            <a onclick="openModal();afficher(4,5);currentSlide(1)" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
+                            <h3 class="articles-title">Application web (multiJoueur): Faritany</h3>
+                            <p class="articles-description">Rust, React</p>
+                            <a href="https://github.com/RANTOfandresena/list_jeu_rust" class="button button-flex button-small articles-button">code source</a>
+                            <a onclick="openModal();afficherVideo('faritany.mp4');" class="button button-flex button-small articles-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
                     </div>
-
-                    <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
-                        <div class="articles-data">
-                            <h3 class="articles-title">Application Desktop:Jeux Fanorona</h3>
-                            <p class="articles-description">Java Swing</p>
-                            <a href="#" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
-                        <div class="articles-data">
-                            <h3 class="articles-title">Application web:Agence de voyage</h3>
-                            <p class="articles-description">php,MySQL</p>
-                            <a href="https://github.com/RANTOfandresena/gestion-de-voiture-de-transport" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
-                        <div class="articles-data">
-                            <h3 class="articles-title">Application web:Site de vente en ligne</h3>
-                            <p class="articles-description">Javascript,jquery,php,MySQL</p>
-                            <a href="#" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
-                        <div class="articles-data">
-                            <h3 class="articles-title">Application web:Chat en temps réel</h3>
-                            <p class="articles-description">Javascript,php,MySQL</p>
-                            <a href="#" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="articles-content grid swiper-slide">
-                        <img src="img/article-3.png" alt="Articles" class="article-img">
-                        <div class="articles-data">
-                            <h3 class="articles-title">Jeux:Serpent</h3>
-                            <p class="articles-description">Python tkinter</p>
-                            <a href="#" class="button button-flex button-small articles-button">
-                                Voir plus <i class="fas fa-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="swiper-button-next">
                     <i class="fas fa-angle-right swiper-articles-icon"></i>
