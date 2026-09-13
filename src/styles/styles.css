@@ -559,7 +559,9 @@ img {
 }
 
 /* Articles section */
+/* `.articles-container` sert de repère aux flèches et à la pagination du carrousel */
 .articles-container {
+  position: relative;
   overflow: initial;
 }
 .articles-container .articles-content {
@@ -595,7 +597,7 @@ img {
   left: -0.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.articles-container .swiper-pagination-horizontal {
   bottom: -2.5rem;
 }
 
