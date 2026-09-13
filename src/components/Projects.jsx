@@ -11,7 +11,7 @@ function buildMedia(demo) {
 
   return Array.from({ length: demo.total - 1 }, (_, index) => ({
     type: 'image',
-    src: `/img/${demo.folder}/${index + 1}.jpg`,
+    src: `${import.meta.env.BASE_URL}img/${demo.folder}/${index + 1}.jpg`,
   }))
 }
 
