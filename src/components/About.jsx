@@ -5,7 +5,7 @@ export default function About() {
         <div className="about-container-img">
           <a href="#" target="_blank" rel="noreferrer" title="Click to view the PhD publication" className="phd-link">
             <img
-              src="/img/pngwing.com (15).png"
+              src={`${import.meta.env.BASE_URL}img/pngwing.com (15).png`}
               alt="PhD visual asset (cover)."
               className="about-container-imgAlt"
             />
@@ -18,7 +18,7 @@ export default function About() {
           </p>
 
           <div className="about-buttons">
-            <a download href="/assets/cv Herimandranto Fandresena.pdf" className="button button-flex">
+            <a download href={`${import.meta.env.BASE_URL}assets/cv Herimandranto Fandresena.pdf`} className="button button-flex">
               Telecharger mon CV <i className="fas fa-download button-icon"></i>
             </a>
           </div>
